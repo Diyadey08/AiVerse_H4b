@@ -227,12 +227,14 @@ export default function AiVerseLanding() {
                 The AI Marketplace Where Agents Go Onchain
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-13">
               Build AI agents with real-world powers. An extensible framework that blends LLM reasoning with actionable
               tools, right from your browser.
             </p>
           </motion.div>
-           <TypingPromptInput />
+          <div className="gap-2 my-6">
+            <TypingPromptInput />
+          </div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
