@@ -1,5 +1,5 @@
 
-````markdown
+
 # 🌌 AI-Verse – Build AI Agents with Real-World Powers
 
 > Built with 💡 by *Phoenix* @ Hack4Bengal  
