@@ -4,11 +4,11 @@ import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu } from "lucide-react"
+import { Bot, Menu } from "lucide-react"
 import { ThemeToggle } from "@/components/frontend/theme-toggle"
 import { useSession, signIn, signOut } from "next-auth/react"
 import Image from "next/image"
-import PhoenixLogo from "@/components/frontend/phoenix-logo"
+// import PhoenixLogo from "@/components/frontend/phoenix-logo"
 import { useAccount, useConnect, useDisconnect } from "wagmi"
 import { injected } from "wagmi/connectors"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -40,8 +40,8 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2" aria-label="Phoenix AI Homepage">
-            <PhoenixLogo width={50} height={50} className="text-black dark:text-white" />
-            <span className="text-2xl font-bold">Phoenix AI</span>
+            <Bot width={50} height={50} className="text-black dark:text-white" />
+            <span className="text-2xl font-bold">AI Verse</span>
           </Link>
         </div>
 
