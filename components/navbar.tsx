@@ -19,9 +19,9 @@ export default function Navbar() {
   const navItems = [
     { label: "Features", href: "/#features" },
     { label: "Tools", href: "/#tools" },
-    { label: "Use Cases", href: "/#use-cases" },
-    { label: "AI-customise", href: "/ai-test" },
-    { label: "AI-chat", href: "/chat" },
+    
+    { label: "AI-Builder", href: "/ai-test" },
+    { label: "AI-Chat", href: "/chat" },
     { label: "MarketPlace", href: "/buy" },
     { label: "My-agents", href: "/my-agents" },
     { label:"Docs", href: "/docs"},
