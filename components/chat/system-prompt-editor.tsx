@@ -53,20 +53,16 @@ export default function SystemPromptEditor({
 
   const availableTools = [
     { id: "getWeather", name: "Weather Tool", icon: <Cloud className="h-4 w-4 mr-2" /> },
-    { id: "executeShell", name: "Shell Tool", icon: <Terminal className="h-4 w-4 mr-2" /> },
-    { id: "generateImage", name: "Image Generation Tool", icon: <ImageIcon className="h-4 w-4 mr-2" /> },
+    
+    
     // { id: "analyzeSrcStructureTool", name: "Folder-Structure Tool", icon: <Folder className="h-4 w-4 mr-2" /> },
-    { id: "musicMood", name: "Music Mood Tool", icon: <Music className="h-4 w-4 mr-2" /> },
+   
     { id: "sendEmail", name: "Send Email Tool", icon: <Mail className="h-4 w-4 mr-2" /> },
     { id: "readEmail", name: "Read Email Tool", icon: <Mail className="h-4 w-4 mr-2" /> },
     
     { id: "webSearch", name: "Browser Tool", icon: <Globe className="h-4 w-4 mr-2" /> },
     { id: "scrapeDocsTool", name: "Web Scraper Tool", icon: <Search className="h-4 w-4 mr-2" /> },
     { id: "fetchFlightDetails", name: "Flight Tool", icon: <Plane className="h-4 w-4 mr-2" /> },
-    { id: "fetchYouTubeVideo", name: "YouTube Tool", icon: <Youtube className="h-4 w-4 mr-2" /> },
-    { id: "googleCalendarManager", name: "Calender Tool", icon: <Calendar className="h-4 w-4 mr-2" /> },
-    { id: "fetchDoctors", name: "Finding Doctors Tool", icon: <Heart className="h-4 w-4 mr-2" /> },
-    { id: "fetchHotelDetails", name: "Hotel Tool", icon: <Hotel className="h-4 w-4 mr-2" /> },
     { id: "nftTool", name: "NFT Tool", icon: <Wallet className="h-4 w-4 mr-2" /> },
     { id: "MoneySendTool", name: "Send Money Tool", icon: <DollarSign className="h-4 w-4 mr-2" /> },
     { id: "distributePaymentTool", name: "Distribute Money Tool", icon: <Users className="h-4 w-4 mr-2" /> },
