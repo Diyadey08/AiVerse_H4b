@@ -32,7 +32,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { useTheme } from "next-themes"
-
+import TypingPromptInput from "@/components/frontend/typing-prompt-input"
 const tools = [
   { id: "getWeather", name: "Weather", icon: Cloud, description: "Fetches current weather data" },
   { id: "executeShell", name: "Shell", icon: Terminal, description: "Runs terminal commands" },
@@ -232,7 +232,7 @@ export default function AiVerseLanding() {
               tools, right from your browser.
             </p>
           </motion.div>
-
+           <TypingPromptInput />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
