@@ -30,7 +30,9 @@ export default function Chat() {
   const [selectedTools, setSelectedTools] = useState<string[]>([])
   const [configApplied, setConfigApplied] = useState(false)
   const [isDeployModalOpen, setIsDeployModalOpen] = useState(false)
-
+const [temperature, setTemperature] = useState(0.7)
+  const [topK, setTopK] = useState(40)
+  const [selectedModel, setSelectedModel] = useState("gemini-2.0-flash")
 
   const { messages, input, handleInputChange, handleSubmit, isLoading, reload } = useChat({
     api: "api/ai-test",
@@ -40,6 +42,10 @@ export default function Chat() {
       array_tools: selectedTools.map((toolId) => ({ name: toolId, tool: toolId })),
       wallet_address: address || "",
       wallet_balance: result.data?.formatted || "0",
+      temperature: temperature,
+      top_k: topK,
+      model: selectedModel,
+      // This will be set when files are uploaded
     },
   })
 
@@ -241,6 +247,13 @@ export default function Chat() {
             onToolsChange={setSelectedTools}
             onApplyConfig={handleApplyConfig}
             handleOpenDeployModal={handleOpenDeployModal}
+             temperature={temperature}
+             onTemperatureChange={setTemperature}
+            topK={topK}
+            onTopKChange={setTopK}
+            
+            selectedModel={selectedModel}
+            onSelectedModelChange={setSelectedModel}
           />
         </div>
 
@@ -308,6 +321,9 @@ export default function Chat() {
         onClose={handleCloseDeployModal}
         systemPrompt={systemPrompt}
         selectedTools={selectedTools}
+        // temperature={temperature}
+        // topK={topK}
+        // selectedModel={selectedModel}
       />
       {activePdf && <PdfViewer activePdf={activePdf} setActivePdf={setActivePdf} />}
     </div>

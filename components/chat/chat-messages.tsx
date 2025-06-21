@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { motion, AnimatePresence } from "framer-motion"
 import MessageContent from "./message-content"
-import PhoenixLogo from "@/components/frontend/phoenix-logo"
+// import PhoenixLogo from "@/components/frontend/phoenix-logo"
 import Orb from "@/components/ui/orb"
 import Particles from "@/components/ui/particles"
 interface ChatMessagesProps {
@@ -89,7 +89,7 @@ export default function ChatMessages({
                     {message.role === "user" ? (
                       <User className="h-5 w-5" />
                     ) : (
-                      <PhoenixLogo className="text-black dark:text-white" width={60} height={60} />
+                      <Bot className="text-black dark:text-white" width={60} height={60} />
                     )}
                   </AvatarFallback>
                 </Avatar>
@@ -143,7 +143,7 @@ function EmptyState({
           }}
           className="absolute inset-0 bg-primary/10 rounded-full"
         />
-        <PhoenixLogo className="text-primary" width={100} height={100} />
+        <Bot className="text-primary" width={100} height={100} />
       </div>
       <h3 className="text-xl font-medium mb-2">Start a conversation with Phoenix</h3>
       <p className="text-sm max-w-xs">
@@ -195,7 +195,7 @@ function LoadingIndicator() {
     >
       <Avatar className="bg-secondary ring-2 ring-secondary">
         <AvatarFallback>
-          <PhoenixLogo className="text-black dark:text-white" width={60} height={60} />
+          <Bot className="text-black dark:text-white" width={60} height={60} />
         </AvatarFallback>
       </Avatar>
 
