@@ -11,7 +11,7 @@ export default function APIReferencePage() {
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-foreground mb-4">API Reference</h1>
         <p className="text-xl text-muted-foreground">
-          Complete reference for Phoenix's REST API endpoints and how to interact with your purchased agents.
+          Complete reference for AiVerse's REST API endpoints and how to interact with your purchased agents.
         </p>
       </div>
 
@@ -22,7 +22,7 @@ export default function APIReferencePage() {
         </CardHeader>
         <CardContent>
           <div className="bg-muted p-3 rounded">
-            <code>https://your-phoenix-instance.vercel.app/api</code>
+            <code>https://Aiverse_H4b.vercel.app/api</code>
           </div>
         </CardContent>
       </Card>
@@ -59,7 +59,7 @@ export default function APIReferencePage() {
               <div>
                 <h4 className="font-semibold mb-2">Endpoint Structure</h4>
                 <div className="bg-muted p-3 rounded text-sm flex items-center justify-between">
-                  <code>POST https://your-phoenix-instance.vercel.app/api/service/QmaXcMfG</code>
+                  <code>POST https://Aiverse_H4b.vercel.app/api/service/QmaXcMfG</code>
                    <ClipboardCopy text="https://your-phoenix-instance.vercel.app/api/service/QmaXcMfG"/>
                 </div>
                 <p className="text-sm text-muted-foreground mt-2">
