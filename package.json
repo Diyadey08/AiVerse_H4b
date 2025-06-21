@@ -46,6 +46,7 @@
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
     "date-fns": "4.1.0",
+    "dompurify": "^3.2.6",
     "embla-carousel-react": "8.5.1",
     "framer-motion": "latest",
     "googleapis": "^150.0.1",
@@ -64,6 +65,8 @@
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.6",
+    "viem": "^2.31.4",
+    "wagmi": "^2.15.6",
     "zod": "^3.24.1"
   },
   "devDependencies": {
