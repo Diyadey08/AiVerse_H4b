@@ -19,14 +19,14 @@ import {distributePaymentTool} from "@/lib/tools/distribute-money"
 export const toolRegistry = {
   getWeather,
   webSearch,
-  executeShell,
+  
   generateImage,
   fetchFlightDetails,
   sendEmail,
   readEmail,
   fetchYouTubeVideo,
   scrapeDocsTool,
-  analyzeSrcStructureTool,
+  
   musicMood,
   googleCalendarManager,
   fetchDoctors,
