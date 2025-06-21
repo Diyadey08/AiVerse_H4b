@@ -33,6 +33,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { useTheme } from "next-themes"
 import TypingPromptInput from "@/components/frontend/typing-prompt-input"
+import Navbar from "@/components/navbar"
 const tools = [
   { id: "getWeather", name: "Weather", icon: Cloud, description: "Fetches current weather data" },
   { id: "executeShell", name: "Shell", icon: Terminal, description: "Runs terminal commands" },
@@ -138,75 +139,7 @@ export default function AiVerseLanding() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-50 px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <motion.div
-            className="flex items-center space-x-2"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
-              <Bot className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-white">AiVerse</span>
-          </motion.div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-300 hover:text-white transition-colors">
-              Features
-            </a>
-            <a href="#tools" className="text-gray-300 hover:text-white transition-colors">
-              Tools
-            </a>
-            <a href="#roadmap" className="text-gray-300 hover:text-white transition-colors">
-              Roadmap
-            </a>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="text-gray-300 hover:text-white"
-            >
-              {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </Button>
-            <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
-              Get Started
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <Button variant="ghost" size="sm" className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </Button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <motion.div
-            className="md:hidden absolute top-full left-0 right-0 bg-black/90 backdrop-blur-lg border-t border-purple-500/20 p-6"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-          >
-            <div className="flex flex-col space-y-4">
-              <a href="#features" className="text-gray-300 hover:text-white transition-colors">
-                Features
-              </a>
-              <a href="#tools" className="text-gray-300 hover:text-white transition-colors">
-                Tools
-              </a>
-              <a href="#roadmap" className="text-gray-300 hover:text-white transition-colors">
-                Roadmap
-              </a>
-              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white w-full">
-                Get Started
-              </Button>
-            </div>
-          </motion.div>
-        )}
-      </nav>
+     <Navbar/>
 
       {/* Hero Section */}
       <section className="relative z-10 px-6 py-20">

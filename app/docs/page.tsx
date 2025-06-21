@@ -9,9 +9,9 @@ export default function GettingStartedPage() {
     <div className="max-w-4xl mx-auto p-6 lg:p-8">
       {/* Page Header */}
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-foreground mb-4">Getting Started with Phoenix</h1>
+        <h1 className="text-4xl font-bold text-foreground mb-4">Getting Started with AiVerse</h1>
         <p className="text-xl text-muted-foreground">
-          Learn how to set up and configure Phoenix AI agent framework in just a few minutes.
+          Learn how to set up and configure AiVerse AI agent framework in just a few minutes.
         </p>
       </div>
 
@@ -51,12 +51,12 @@ export default function GettingStartedPage() {
       <div className="space-y-8">
         <section>
           <h2 className="text-2xl font-bold text-foreground mb-4">1. Clone the Repository</h2>
-          <p className="text-muted-foreground mb-4">Start by cloning the Phoenix repository to your local machine:</p>
+          <p className="text-muted-foreground mb-4">Start by cloning the AiVerse repository to your local machine:</p>
           <div className="bg-muted p-4 rounded-lg overflow-x-auto">
             <code className="text-sm">
-              git clone https://github.com/yourusername/phoenix.git
+              git clone https://github.com/yourusername/AiVerse.git
               <br />
-              cd phoenix
+              cd AiVerse
             </code>
           </div>
         </section>
@@ -136,7 +136,7 @@ export default function GettingStartedPage() {
             <div className="flex items-start">
               <AlertCircle className="h-5 w-5 text-blue-600 dark:text-blue-400 mt-0.5 mr-2 flex-shrink-0" />
               <p className="text-blue-800 dark:text-blue-200 text-sm">
-                <strong>Note:</strong> You don't need all API keys to get started. Phoenix will work with whatever tools
+                <strong>Note:</strong> You don't need all API keys to get started. AiVerse will work with whatever tools
                 you configure.
               </p>
             </div>
@@ -145,7 +145,7 @@ export default function GettingStartedPage() {
 
         <section>
           <h2 className="text-2xl font-bold text-foreground mb-4">4. Start the Development Server</h2>
-          <p className="text-muted-foreground mb-4">Launch the development server to start using Phoenix:</p>
+          <p className="text-muted-foreground mb-4">Launch the development server to start using AiVerse:</p>
           <div className="bg-muted p-4 rounded-lg overflow-x-auto">
             <code>npm run dev</code>
           </div>
@@ -154,13 +154,13 @@ export default function GettingStartedPage() {
             <Link href="http://localhost:3000" className="text-primary hover:underline">
               http://localhost:3000
             </Link>{" "}
-            in your browser to access the Phoenix interface.
+            in your browser to access the AiVerse interface.
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold text-foreground mb-4">5. Create Your First Agent</h2>
-          <p className="text-muted-foreground mb-4">Once Phoenix is running, you can create your first AI agent:</p>
+          <p className="text-muted-foreground mb-4">Once AiVerse is running, you can create your first AI agent:</p>
           <ol className="list-decimal list-inside space-y-2 text-muted-foreground mb-4">
             <li>Navigate to the agent creation interface</li>
             <li>Write a system prompt for your agent</li>
@@ -183,13 +183,13 @@ export default function GettingStartedPage() {
             <Button asChild variant="outline" className="h-auto p-4">
               <Link href="/docs/tools" className="flex flex-col items-start">
                 <span className="font-semibold">Explore Available Tools</span>
-                <span className="text-sm text-muted-foreground">Learn about all the tools Phoenix provides</span>
+                <span className="text-sm text-muted-foreground">Learn about all the tools AiVerse provides</span>
               </Link>
             </Button>
             <Button asChild variant="outline" className="h-auto p-4">
               <Link href="/docs/configuration" className="flex flex-col items-start">
                 <span className="font-semibold">Advanced Configuration</span>
-                <span className="text-sm text-muted-foreground">Customize Phoenix for your needs</span>
+                <span className="text-sm text-muted-foreground">Customize AiVerse for your needs</span>
               </Link>
             </Button>
           </div>

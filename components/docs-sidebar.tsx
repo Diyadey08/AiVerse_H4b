@@ -63,7 +63,7 @@ export function DocsSidebar() {
       <div className="p-6">
         <div className="flex items-center space-x-2 mb-6">
           <Bot className="h-6 w-6 text-primary" />
-          <span className="text-lg font-semibold">Phoenix Docs</span>
+          <span className="text-lg font-semibold">AiVerse Docs</span>
         </div>
 
         <nav className="space-y-1">
@@ -93,7 +93,7 @@ export function DocsSidebar() {
           <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">External Links</h4>
           <div className="space-y-1">
             <a
-              href="https://github.com/yourusername/phoenix"
+              href="https://github.com/yourusername/AiVerse"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
