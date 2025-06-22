@@ -51,7 +51,7 @@ import PdfViewer from "@/components/chat/pdf-viewer"
 import Navbar from '@/components/navbar'
 export default function Chat({ params }: { params: { id: string } }) {
   
-  const { id } = React.use(params)
+  const { id } = params
 
   const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
     api: `https://ai-verse-h4b.vercel.app/api/ai-use/${id}`,
@@ -69,45 +69,7 @@ export default function Chat({ params }: { params: { id: string } }) {
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const formRef = useRef<HTMLFormElement>(null)
   const scrollAreaRef = useRef<HTMLDivElement>(null)
-  const [speechSupported, setSpeechSupported] = useState(false)
-      const [isListening, setIsListening] = useState(false)
-      const [isRecording, setIsRecording] = useState(false)
-     const recognitionRef = useRef<SpeechRecognition | null>(null)
-useEffect(() => {
-       // Check if speech recognition is supported
-       if (typeof window !== "undefined") {
-         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
-         if (SpeechRecognition) {
-           setSpeechSupported(true)
-           const recognition = new SpeechRecognition()
-           recognition.continuous = false
-           recognition.interimResults = false
-           recognition.lang = "en-US"
-   
-           recognition.onstart = () => {
-             setIsListening(true)
-           }
-   
-           recognition.onresult = (event) => {
-             const transcript = event.results[0][0].transcript
-             handleInputChange({ target: { value: transcript } } as any)
-           }
-   
-           recognition.onend = () => {
-             setIsListening(false)
-             setIsRecording(false)
-           }
-   
-           recognition.onerror = (event) => {
-             console.error("Speech recognition error:", event.error)
-             setIsListening(false)
-             setIsRecording(false)
-           }
-   
-           recognitionRef.current = recognition
-         }
-       }
-     }, [handleInputChange])
+
   // Auto-scroll to bottom when new messages arrive
   const scrollToBottom = () => {
     if (scrollAreaRef.current) {
@@ -201,26 +163,7 @@ useEffect(() => {
     handleInputChange({ target: { value: prompt } } as any)
     setTimeout(() => formRef.current?.requestSubmit(), 100)
   }
-const startRecording = () => {
-    if (recognitionRef.current && speechSupported) {
-      setIsRecording(true)
-      recognitionRef.current.start()
-    }
-  }
 
-  const stopRecording = () => {
-    if (recognitionRef.current) {
-      recognitionRef.current.stop()
-    }
-  }
-
-  const handleVoiceToggle = () => {
-    if (isRecording) {
-      stopRecording()
-    } else {
-      startRecording()
-    }
-  }
   return (
     <div className="flex flex-col w-full mx-auto h-screen bg-background shadow-lg overflow-hidden">
       
@@ -260,20 +203,15 @@ const startRecording = () => {
       )}
 
       <ChatInput
-             input={input}
-          handleInputChange={handleInputChange}
-          onSubmit={onSubmit}
-          isLoading={isLoading}
-          files={files}
-          formRef={formRef}
-          fileInputRef={fileInputRef}
-          handleFileChange={handleFileChange}
-          // Add voice-related props
-          isRecording={isRecording}
-          isListening={isListening}
-          speechSupported={speechSupported}
-          handleVoiceToggle={handleVoiceToggle}
-          />
+        input={input}
+        handleInputChange={handleInputChange}
+        onSubmit={onSubmit}
+        isLoading={isLoading}
+        files={files}
+        formRef={formRef}
+        fileInputRef={fileInputRef}
+        handleFileChange={handleFileChange}
+      />
 
       {activePdf && <PdfViewer activePdf={activePdf} setActivePdf={setActivePdf} />}
     </div>

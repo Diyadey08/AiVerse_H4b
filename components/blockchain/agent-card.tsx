@@ -96,7 +96,7 @@ export function AgentCard({ agent, isPurchased = false }: AgentCardProps) {
                 View Details
               </CardItem>
               <Link
-                  className="bg-primary text-white rounded-md px-32 py-2 mt-2 flex text-md text-center text-nowrap"
+                  className="bg-primary text-black rounded-md px-32 py-2 mt-2 flex text-md text-center text-nowrap"
                   href={`/ai-use/${extractIdFromUrl(agent.fileLink)}/chat-with-agent`}
                 >
                   Use This Agent
